@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "webpack",
-    "start": "webpack"
+    "build": "rimraf dist && webpack --mode production",
+    "serve": "webpack serve"
   },
   "author": "",
   "license": "ISC",
@@ -13,7 +13,9 @@
     "react": "^18.3.1"
   },
   "devDependencies": {
+    "rimraf": "^6.0.1",
     "webpack": "^5.101.3",
+    "webpack-cli": "^6.0.1",
     "webpack-dev-server": "^5.2.2"
   }
 }
