@@ -6,8 +6,14 @@ module.exports = {
   output: {
     filename: "[name].js",
     path: path.resolve(__dirname, "dist"),
+    library: {
+      type: "system",
+    },
   },
-  exportsFields: [],
+  externals: ["react"],
+  resolve: {
+    exportsFields: [],
+  },
   plugins: [
     new CopyPlugin({
       patterns: [{ from: "src/index.html", to: "" }],
