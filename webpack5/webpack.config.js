@@ -7,6 +7,7 @@ module.exports = {
     filename: "[name].js",
     path: path.resolve(__dirname, "dist"),
   },
+  exportsFields: [],
   plugins: [
     new CopyPlugin({
       patterns: [{ from: "src/index.html", to: "" }],
